@@ -1,0 +1,40 @@
+
+<!-- SEARCH FORM -->
+<form id="searchForm" ng-submit="search()">
+	<input type="text" placeholder="Search for species..." ng-model="keywords">
+	<span id="clearSearch" ng-show="searchActive" ng-click="clear()">X</span>
+	<input type="submit" value="Search"/>
+	<p style="font-size: 8px">Try for example: "canis lupus" or "blobfish"</p>
+</form>
+
+
+<!-- SEARCH RESULTS -->
+<div id="searchResults" ng-show="searchActive">
+
+	<!-- EMPTY RESULTS MESSAGE -->
+	<div class="resultMessage" ng-hide="species.length || searchError">
+		<p>Your search had no results. Please try again.</br>
+			<span>e.g.: 'canis lupus' or 'blobfish'</span>
+		</p>
+	</div>
+
+	<!-- ERROR MESSAGE -->
+	<div class="resultMessage" ng-show="searchError">
+		<p>Ooops. There was an error, please try again.</p>
+	</div>
+
+	<!-- RESULTS -->
+	<ul id="speciesList" ng-show="species">
+		<li ng-repeat="specie in species" ng-click="select(specie.speciesKey)"
+			class="specie" ng-class="{active : specie.speciesKey === selectedID}">
+			
+			<img ng-src="./img/placeholder.png"/>
+			<div class="description">
+				<h3>{{specie.species}}</h3>
+				<p>{{specie.kingdom}} > {{specie.phylum}} > {{specie.class}} > {{specie.order}} > {{specie.family}} > {{specie.genus}} > {{specie.species}}</p>
+			</div>
+			
+		</li>
+	</ul>
+
+</div>

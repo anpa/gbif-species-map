@@ -1,45 +1,21 @@
 @import 'grid';
 
-$background-color: #F7F7F7;
 $selection-color: #ecf0f1;
+
+$search-position-top: 20px;
+$search-position-left: 20px;
 
 body {
 	margin: 20px;
 	padding: 0;
 	font-family: Arial, sans-serif;
 	font-size: 14px;
-
-	background-color: $background-color;
 }
 
 ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-.specie {
-	cursor:pointer;
-	padding: 10px;
-	height: 119px;
-
-	img {
-		width: 38%;
-		float: left;
-		margin-right: 10px;
-	}
-
-	h3 {
-		margin: 0px;
-	}
-
-	p {
-		font-size:11px;
-	}
-}
-
-.specie:hover, .specie.active {
-	background-color: $selection-color;
 }
 
 #map-canvas {
@@ -51,21 +27,10 @@ ul {
 	z-index : 200;
 }
 
-#myform {
-	position:absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-  	background-color: white;
-  	padding: 30px;
-  	height: 400px;
-  	overflow: scroll;
-}
-
 #searchForm {
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: $search-position-top;
+	left: $search-position-left;
 	z-index: 1000;
 
 	input[type="text"] {
@@ -80,15 +45,62 @@ ul {
 		border: none;
 		padding: 10px;
 	}
+
+	#clearSearch {
+		display: inline-block;
+		padding: 10px 15px;
+		margin-left: -43px;
+		cursor:pointer;
+		color: #a3a3a3;
+	}
 }
 
-#speciesList {
-  background-color: white;
-  position: absolute;
-  top: 65px;
-  left: 20px;
-  z-index: 1000;
-  max-height: 500px;
-  overflow-y: auto;
-  width: 369px;
+#searchResults {
+	
+	background-color: white;
+
+	position: absolute;
+	top: 65px;
+	left: 20px;
+	z-index: 1000;
+
+	width: 369px;
+	max-height: 500px;
+	overflow-y: auto;
+
+}
+
+.resultMessage {
+	text-align: center;
+	span {
+		font-style: oblique;
+	}
+}
+
+.specie {
+	cursor:pointer;
+	height: 119px;
+	padding: 10px;
+
+	img {
+		width: 38%;
+		float: left;
+		margin-right: 10px;
+	}
+
+	.description {
+		h3 {
+		margin: 0px;
+		}
+
+		p {
+			font-size: 11px;
+			font-style: oblique;
+		}
+	}
+	
+}
+
+.specie:hover, .specie.active {
+	background-color: $selection-color;
 }

@@ -16,7 +16,7 @@ var reload = browserSync.reload;
 gulp.task('sass', function () {
     gulp.src('app/css/styles.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('app/css'))
+        .pipe(gulp.dest('app/dist'))
         .pipe(reload({ stream:true }));
 });
 
