@@ -1,0 +1,94 @@
+@import 'grid';
+
+$background-color: #F7F7F7;
+$selection-color: #ecf0f1;
+
+body {
+	margin: 20px;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+	background-color: $background-color;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.specie {
+	cursor:pointer;
+	padding: 10px;
+	height: 119px;
+
+	img {
+		width: 38%;
+		float: left;
+		margin-right: 10px;
+	}
+
+	h3 {
+		margin: 0px;
+	}
+
+	p {
+		font-size:11px;
+	}
+}
+
+.specie:hover, .specie.active {
+	background-color: $selection-color;
+}
+
+#map-canvas {
+	height : 100%;
+	width : 100%;
+	top : 0;
+	left : 0;
+	position : absolute;
+	z-index : 200;
+}
+
+#myform {
+	position:absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+  	background-color: white;
+  	padding: 30px;
+  	height: 400px;
+  	overflow: scroll;
+}
+
+#searchForm {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+
+	input[type="text"] {
+		padding: 10px;
+		width: 300px;
+		border: none;
+	}
+
+	input[type="submit"] {
+		background-color: #2ecc71;
+		color: white;
+		border: none;
+		padding: 10px;
+	}
+}
+
+#speciesList {
+  background-color: white;
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  z-index: 1000;
+  max-height: 500px;
+  overflow-y: auto;
+  width: 369px;
+}

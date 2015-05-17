@@ -1,0 +1,18 @@
+<form id="searchForm" ng-submit="search()">
+	<input type="text" placeholder="Search for specie..." ng-model="keywords">
+	<input type="submit" value="Search"/>
+	<p style="font-size: 8px">Try for example: "canis lupus" or "blobfish"</p>
+</form>
+
+<ul id="speciesList" ng-show="species">
+	<li class="specie" ng-hide="species.length">
+		<p>Your search had no results. Please try again.</p>
+		<p>e.g.: 'canis lupus' or 'blobfish'</p>
+	</li>
+	<li class="specie" ng-class="{active : specie.speciesKey === selectedID}" ng-repeat="specie in species" ng-click="selectSpecies(specie.speciesKey)">
+		<img ng-src="./img/placeholder.png"/>
+		<h3>{{specie.species}}</h3>
+		<p>{{specie.kingdom}} > {{specie.phylum}} > {{specie.class}} > {{specie.order}} > {{specie.family}} > {{specie.genus}}</p>
+		<!--<button ng-click="getImageURL(specie.speciesKey)">Image</button>-->
+	</li>
+</ul>
