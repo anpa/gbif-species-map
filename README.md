@@ -11,6 +11,7 @@ Demo: http://anpa.github.io/gbif-species-map/
 1. Run `npm install`
 2. Run `bower install`
 3. Run `gulp start`
+<<<<<<< HEAD
 
 ## Toolbox
 
@@ -26,3 +27,5 @@ Demo: http://anpa.github.io/gbif-species-map/
 * Unit testing
 * Documentation
 * Fetch species images
+=======
+>>>>>>> 95f5ad5a49c38d1dccb09bac6e60af47fb33b559
