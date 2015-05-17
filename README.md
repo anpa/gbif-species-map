@@ -14,6 +14,8 @@ Demo: http://anpa.github.io/gbif-species-map/
 
 ## Toolbox
 
+This project uses:
+
 * NPM
 * Bower
 * AngularJS
@@ -26,3 +28,4 @@ Demo: http://anpa.github.io/gbif-species-map/
 * Unit testing
 * Documentation
 * Fetch species images
+* Add gulp tasks for production (minify CSS, JS)
