@@ -1,6 +1,6 @@
 # GBIF Species Map
 
-![alt tag](http://url/to/img.png)
+![alt tag](screen.png)
 
 A simple map of species that combines the [GBIF Data API](http://www.gbif.org/developer/summary) with Google Maps, using AngularJS and some other cool stuff.
 
